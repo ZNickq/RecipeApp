@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IngredientHeaderViewCell" customModule="RecipeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="291" height="25"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0I-rB-dO4">
+                    <rect key="frame" x="2.5" y="2" width="286" height="20"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noY-pN-UFO">
+                            <rect key="frame" x="-0.5" y="0.0" width="286" height="20"/>
+                            <connections>
+                                <action selector="toggleState:" destination="iN0-l3-epB" eventType="touchUpInside" id="fNh-Ve-fNJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="noY-pN-UFO" firstAttribute="centerY" secondItem="Q0I-rB-dO4" secondAttribute="centerY" id="O9O-Xw-j32"/>
+                        <constraint firstItem="noY-pN-UFO" firstAttribute="width" secondItem="Q0I-rB-dO4" secondAttribute="width" id="Uas-5Z-HHX"/>
+                        <constraint firstItem="noY-pN-UFO" firstAttribute="centerX" secondItem="Q0I-rB-dO4" secondAttribute="centerX" id="e9g-2S-eDC"/>
+                        <constraint firstItem="noY-pN-UFO" firstAttribute="height" secondItem="Q0I-rB-dO4" secondAttribute="height" id="qTZ-Dy-aAc"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e5-UM-CaT">
+                    <rect key="frame" x="5" y="3.5" width="281" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2e5-UM-CaT" secondAttribute="trailing" constant="5" id="3Ib-vh-2XI"/>
+                <constraint firstItem="2e5-UM-CaT" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="7LK-mA-ZwJ"/>
+                <constraint firstItem="Q0I-rB-dO4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="IY5-3b-Ish"/>
+                <constraint firstItem="Q0I-rB-dO4" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-5" id="PVB-dJ-mnW"/>
+                <constraint firstItem="2e5-UM-CaT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="Rne-x3-Jaa"/>
+                <constraint firstItem="Q0I-rB-dO4" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-5" id="mkx-4d-7HB"/>
+                <constraint firstItem="Q0I-rB-dO4" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="oZF-3g-7CD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backView" destination="Q0I-rB-dO4" id="fuX-aW-GMs"/>
+                <outlet property="ingredientLabel" destination="2e5-UM-CaT" id="lS3-8X-4rY"/>
+            </connections>
+            <point key="canvasLocation" x="-8.5" y="-254.5"/>
+        </view>
+    </objects>
+</document>
